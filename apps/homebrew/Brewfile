@@ -60,5 +60,5 @@ cask 'zoom'
 # mas "DaisyDisk", id: 411643860
 # mas "XCode", id: 497799835
 # mas "Save to Pocket", id: 1477385213
-mas "Slack for Desktop", id: 803453959
+# mas "Slack for Desktop", id: 803453959
 # mas "Bumpr", id: 1166066070
