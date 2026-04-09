@@ -10,7 +10,7 @@ To install these dotfiles on a new environment:
 `xcode-select --install`
 
 2. Clone the repository:
-`git clone https://github.com/rowan/dotfiles.git ~/.dotfiles`
+`git clone https://github.com/HokuNZ/dotfiles.git ~/.dotfiles`
 
 3. Then, run **install**:
 `cd ~/.dotfiles`
@@ -24,7 +24,7 @@ This:
 The terminal configuration:
 - Adds **bin/** files to `$PATH` (see: `/apps/system/path.zsh`)
 - Symlinks **app/\*.symlink** files to `$HOME`
-- Runs **app/\*\*/\*.zsh** scripts in order (see `/apps/termainal/zshrc.symlink` for details):
+- Runs **app/\*\*/\*.zsh** scripts in order (see `/apps/terminal/zshrc.symlink` for details):
     - First, runs **app/\*\*/path.zsh** scripts (to setup `$PATH` or similar)
     - Then, runs all other **app/\*\*/\*.zsh** scripts (excluding **install.zsh** or **completion.zsh**)
     - Finally, runs **app/\*\*/completion.zsh** scripts (to setup autocompletes)
