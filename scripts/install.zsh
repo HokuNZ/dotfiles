@@ -4,17 +4,11 @@
 set -e
 
 # Check for Xcode Command Line Tools (required for git, etc.)
-if ! xcode-select -p &>/dev/null; then
+if ! git --version &>/dev/null; then
     echo "▶️  Installing Xcode Command Line Tools..."
     xcode-select --install
     echo "⏳ Please complete the installation dialog, then re-run this script."
     exit 0
-fi
-
-# Complete Xcode first-run setup if needed
-if ! /usr/bin/xcrun --version &>/dev/null; then
-    echo "▶️  Completing Xcode first-run setup (requires admin password)..."
-    sudo xcodebuild -runFirstLaunch
 fi
 
 # setup dotfiles
