@@ -32,18 +32,18 @@ else
     echo "  Personalise this file with your name and preferences."
 fi
 
-# Install Claude Code plugins (official)
-if command -v claude &> /dev/null; then
-    for plugin in "frontend-design@claude-plugins-official" "pr-review-toolkit@claude-plugins-official"; do
-        if claude plugin install "$plugin" 2>&1; then
-            echo "Installed plugin: $plugin"
-        else
-            echo "\033[00;33mWarning: Failed to install plugin: $plugin\033[0m"
-        fi
-    done
-else
-    echo "\033[00;33mWarning: claude CLI not found, skipping plugin installation\033[0m"
-fi
+# # Install Claude Code plugins (official)
+# if command -v claude &> /dev/null; then
+#     for plugin in "frontend-design@claude-plugins-official" "pr-review-toolkit@claude-plugins-official"; do
+#         if claude plugin install "$plugin" 2>&1; then
+#             echo "Installed plugin: $plugin"
+#         else
+#             echo "\033[00;33mWarning: Failed to install plugin: $plugin\033[0m"
+#         fi
+#     done
+# else
+#     echo "\033[00;33mWarning: claude CLI not found, skipping plugin installation\033[0m"
+# fi
 
 # Install default skills on first setup (users can add/modify their own)
 SKILLS_DIR="$HOME/.claude/skills"

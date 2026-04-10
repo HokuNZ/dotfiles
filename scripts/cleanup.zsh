@@ -54,6 +54,7 @@ echo "› \033[00;34mCleaning up removed casks\033[0m"
 REMOVED_CASKS=(
     "asana"
     "calibre"
+    "tailscale-app"
 )
 
 for cask in "${REMOVED_CASKS[@]}"; do
