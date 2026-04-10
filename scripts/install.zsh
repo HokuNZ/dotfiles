@@ -3,9 +3,17 @@
 # if there is an error then stop immediately
 set -e
 
+# Check for Xcode Command Line Tools (required for git, curl, etc.)
+if ! xcode-select -p &>/dev/null; then
+    echo "▶️  Installing Xcode Command Line Tools..."
+    xcode-select --install
+    echo "⏳ Please complete the installation dialog, then re-run this script."
+    exit 0
+fi
+
 # setup dotfiles
 echo "▶️  Setup dotfiles"
-# assumes this code is run from ~/.dotfiles
+# Dotfiles location (must match where the repo is cloned)
 export DOTFILES=$HOME/.dotfiles
 echo "DOTFILES = ${DOTFILES}"
 
